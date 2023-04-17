@@ -15,6 +15,11 @@ function App() {
     await Auth.signOut();
   }
 
+  function getMessage() {
+    console.log(process.env.REACT_APP_TESTMESSAGE);
+    return process.env.REACT_APP_TESTMESSAGE;
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -25,6 +30,7 @@ function App() {
         <button onClick={signIn}>Sign In</button>
         <button onClick={signOut}>Sign Out</button>
         <p>{user ? JSON.stringify(user) : 'No user'}</p>
+        <button onClick={getMessage}>Get Message</button>
       </header>
     </div>
   );
