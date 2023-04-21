@@ -17,6 +17,7 @@ function App() {
 
   function getMessage() {
     console.log(process.env.REACT_APP_TESTMESSAGE);
+    
     return process.env.REACT_APP_TESTMESSAGE;
   }
 
